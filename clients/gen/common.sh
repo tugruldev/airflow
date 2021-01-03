@@ -29,6 +29,7 @@ function gen_client {
     docker run --rm \
         -v "${SPEC_PATH}:/spec" \
         -v "${OUTPUT_DIR}:/output" \
+        -v "${IMAGE_DIR}:/images" \
         openapitools/openapi-generator-cli:v${OPENAPI_GENERATOR_CLI_VER} \
         generate \
         --input-spec "/spec" \
